@@ -6,65 +6,72 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Smart Banking</title>
     <style>
-        body {
-            background-color: #364652;
+        .bg_color {
+            background: linear-gradient(to right, #364652, rgb(255, 255, 255));
         }
-        .custom-container {
-            background-color: #ACB4BB;
-            box-shadow: 0 10px 15px rgba(37, 22, 74, 0.3);
+        .hover-beige:hover {
+            background-color: #e0d3b8;
+            color: #2c3e50;
         }
     </style>
 </head>
-<body class="text-gray-800 min-h-screen flex flex-col justify-between">
-    <div class="container mx-auto py-10 space-y-10">
-        <!-- Title -->
-        <h1 class="text-center text-4xl font-bold tracking-widest">YOUR SMART BANKING</h1>
+<body class="bg_color min-h-screen flex flex-col justify-between">
 
-        <!-- Monthly data -->
+<!-- Main Container with top and bottom margin -->
+<div class="max-w-6xl mx-auto mt-5 mb-5 py-10 px-4 lg:px-8 bg-white rounded-lg shadow-xl">
+
+    <div class="container mx-auto py-10 space-y-10">
+
+        <!-- Title -->
+        <h1 class="text-center text-4xl font-bold text-gray-800">Your Smart Banking</h1>
+
+        <!-- Monthly Data Section -->
         <div class="grid grid-cols-2 gap-6 px-10">
-            <div class="custom-container rounded-xl p-6 text-center shadow-xl text-white">
-                <p class="text-xs uppercase">This Month</p>
-                <p class="text-xs uppercase">Currency</p>
-                <p class="text-3xl text-red-400 font-bold">-$14200</p>
+            <div class="bg-gray-100 rounded-xl p-6 text-center shadow-md">
+                <p class="uppercase text-sm font-semibold text-gray-600">This Month</p>
+                <p class="text-3xl font-bold text-red-600">-$14200</p>
             </div>
-            <div class="custom-container rounded-xl p-6 text-center shadow-xl text-white">
-                <p class="text-xs uppercase">Last Month</p>
-                <p class="text-xs uppercase">Currency</p>
-                <p class="text-3xl text-red-400 font-bold">-$10000</p>
+            <div class="bg-gray-100 rounded-xl p-6 text-center shadow-md">
+                <p class="uppercase text-sm font-semibold text-gray-600">Last Month</p>
+                <p class="text-3xl font-bold text-green-600">-$10000</p>
             </div>
         </div>
 
         <!-- Graph Placeholder -->
         <div class="px-10">
-            <div class="custom-container rounded-xl p-4 shadow-xl text-white">
-                <img src="/path/to/your/chart/image.png" alt="Graph Chart" class="w-full h-80 object-cover rounded-xl">
+            <div class="bg-gray-100 rounded-xl p-6 shadow-md">
+                <div class="w-full h-80 bg-gray-200 rounded-xl flex items-center justify-center">
+                    <p class="text-gray-500">Graph Chart Placeholder</p>
+                </div>
             </div>
         </div>
 
-        <!-- Expense description -->
-        <div class="custom-container rounded-xl p-6 mx-10 text-center shadow-xl text-white">
-            <p>This month, you used 50 percent more money on your groceries and 20 percent less on your family expenses</p>
+        <!-- Expense Description -->
+        <div class="bg-gray-100 rounded-xl p-6 mx-10 text-center shadow-md">
+            <p class="text-lg text-gray-800">This month, you used <span class="font-bold">50%</span> more on groceries and <span class="font-bold">20%</span> less on family expenses.</p>
         </div>
 
-        <!-- Monthly comparison -->
+        <!-- Monthly Comparison -->
         <div class="grid grid-cols-2 gap-6 px-10">
-            <div class="custom-container rounded-xl p-6 text-center shadow-xl text-white">
-                <p>You are using more money than last month</p>
+            <div class="bg-gray-100 rounded-xl p-6 text-center shadow-md">
+                <p class="text-lg font-semibold text-gray-800">You are using more money than last month</p>
             </div>
-            <div class="custom-container rounded-xl p-6 text-center shadow-xl text-white">
-                <p class="text-3xl text-red-400 font-bold">-$4200</p>
+            <div class="bg-gray-100 rounded-xl p-6 text-center shadow-md">
+                <p class="text-3xl font-bold text-red-600">-$4200</p>
             </div>
         </div>
 
-        <!-- Profile button -->
+        <!-- Profile Button -->
         <div class="flex justify-center px-10">
-            <button class="bg-purple-500 text-white font-bold py-4 px-12 rounded-full mt-6 hover:bg-purple-600 transition">Your profile</button>
+            <button class="bg-gray-800 text-white py-4 px-12 rounded-full shadow-md hover-beige transition-colors duration-300">Your profile</button>
         </div>
     </div>
 
     <!-- Home Button -->
     <div class="flex justify-center py-6">
-        <a href="home.html" class="bg-purple-500 text-white font-bold py-3 px-6 rounded-full hover:bg-purple-600 transition">Home</a>
+        <a href="home.html" class="bg-gray-800 text-white py-3 px-6 rounded-full shadow-md hover-beige transition-colors duration-300">Home</a>
     </div>
+
+</div>
 </body>
 </html>
